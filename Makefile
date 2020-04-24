@@ -12,5 +12,11 @@ all: $(TARGET)
 $(TARGET): $(OBJFILES)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJFILES) $(LDFLAGS)
 
+file1.o : file1.c headers.h
+
+file2.o : file2.c headers.h
+
+driver.o : driver.c headers.h
+
 clean:
 	rm -fr $(TARGET) $(OBJFILES)
